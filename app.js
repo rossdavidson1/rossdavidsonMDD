@@ -15,9 +15,10 @@ customElements.define('page-one', class extends HTMLElement {
 
                     <ion-card-content>
                         <ion-item>
-                            <ion-img id="img-choice" src="./Pictures/frog.jpg"/>
+                            <ion-label>Hi</ion-label>
                         </ion-item>
                         <ion-button expand="block" href="#/two">Go to page two</ion-button>
+                        <ion-button expand="block" href="#/three">Go to page three</ion-button>
                     </ion-card-content>
                 </ion-card>
             </ion-content>
@@ -44,7 +45,7 @@ customElements.define('page-two', class extends HTMLElement {
 
                     <ion-card-content>
                         <ion-item>
-                            <ion-img id="img-choice" src="./Pictures/mantis.jpg"/>
+                            <ion-label>Hi</ion-label>
                         </ion-item>
                         <ion-button expand="block" href="#/three">Go to page three</ion-button>
                     </ion-card-content>
@@ -73,7 +74,7 @@ customElements.define('page-three', class extends HTMLElement {
 
                     <ion-card-content>
                         <ion-item>
-                            <ion-img id="img-choice" src="./Pictures/cat.jpg"/>
+                            <ion-label background-color="tertiary">Hi</ion-label>
                         </ion-item>
                         <ion-button expand="block" href="#/">Go to page one</ion-button>
                     </ion-card-content>
