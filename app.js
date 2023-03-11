@@ -8,7 +8,6 @@ customElements.define('page-one', class extends HTMLElement {
             </ion-header>
 
             <ion-content padding>
-                <img src="
                 <ion-card>
                     <ion-card-header>
                         <ion-card-title id="title-animal1">Frog</ion-card-title>
