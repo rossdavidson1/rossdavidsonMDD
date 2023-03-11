@@ -8,6 +8,7 @@ customElements.define('page-one', class extends HTMLElement {
             </ion-header>
 
             <ion-content padding>
+                <img src="
                 <ion-card>
                     <ion-card-header>
                         <ion-card-title id="title-animal1">Frog</ion-card-title>
@@ -74,7 +75,7 @@ customElements.define('page-three', class extends HTMLElement {
 
                     <ion-card-content>
                         <ion-item>
-                            <ion-label background-color="tertiary">Hi</ion-label>
+                            <ion-label>Hi</ion-label>
                         </ion-item>
                         <ion-button expand="block" href="#/">Go to page one</ion-button>
                     </ion-card-content>
