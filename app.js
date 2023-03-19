@@ -131,19 +131,20 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
                     <ion-title slot="end">Easy Hikes</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ion-content>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title><h1>Easy Hikes</h1></ion-card-title>
-                    </ion-card-header>
-
-                    <ion-card-content>
-                        <ion-item>
-                            <ion-label>Hi</ion-label>
+            <ion-content padding>                
+                <ion-list>
+                    ${animals.map(animal => `
+                        <ion-item button onclick="showDetail('${animal.title}')">
+                            <ion-avatar slot="start">
+                                <img src="${animal.avatar}">
+                            </ion-avatar>
+                            <ion-label>
+                                <h1>${animal.title}</h1>
+                            </ion-label>
                         </ion-item>
-                        <ion-button expand="block" href="#/three">Go to page three</ion-button>
-                    </ion-card-content>
-                </ion-card>
+                    `).join('\n')}
+                
+                </ion-list>   
             </ion-content>
 
             <ion-footer>
@@ -160,6 +161,61 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
         `;
     }
 });
+
+const nav = document.querySelector('ion-nav');
+
+
+function showDetail(aTitle) {
+    let animal = new Object;
+    for (anAnimal of animals) {
+        if (anAnimal.title === aTitle) {
+            animal = anAnimal;
+        }
+    }
+    console.log(animal.title)
+    nav.push('easy-hike-detail', { animal });
+}
+
+customElements.define('easy-hike-detail', class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <ion-header >
+        <ion-toolbar color="success">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>${this.animal.title}
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen class="ion-padding">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.animal.image}"/>
+                </ion-item>
+                <ion-item>
+                    <ion-label><h1>${this.animal.title}s go ${this.animal.sound}</h1></ion-label>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+
+    <ion-footer>
+            <ion-toolbar color="light">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
+                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-toolbar>
+            </ion-footer
+        `;
+    }
+});
+
 
 customElements.define('page-medium-hikes', class extends HTMLElement {
     connectedCallback() {
