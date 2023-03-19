@@ -1,32 +1,32 @@
 let animals = [
     {
-        'title': 'Bear',
-        'avatar': './Animals/bear.png',
+        'title': 'Anderson Wood',
+        'avatar': './Routes/andersonwoodRoute.png',
         'sound': 'roar',
-        'image': './Pictures/bear.jpg'
+        'image': './Pictures/andersonwood.jpg'
     },
     {
-        'title': 'Dog',
-        'avatar': './Animals/dog.png',
+        'title': 'Donmouth and Persley Circular',
+        'avatar': './Routes/donmouthRoute.png',
         'sound': 'woof',
-        'image': './Pictures/dog.jpg'
+        'image': './Pictures/donmouth.jpg'
     },
     {
-        'title': 'Cat',
-        'avatar': './Animals/cat.png',
+        'title': 'Footdee to Hillhead Center',
+        'avatar': './Routes/footdeeRoute.png',
         'sound': 'meow',
-        'image': './Pictures/cat.jpg'
+        'image': './Pictures/footdee.jpg'
     },
     {
-        'title': 'Pig',
-        'avatar': './Animals/pig.png',
+        'title': 'River Don Path',
+        'avatar': './Routes/riverdonRoute.png',
         'sound': 'oink',
-        'image': './Pictures/pig.jpg'
+        'image': './Pictures/riverdon.jpg'
     },
     {
-        'title': 'Snake',
-        'avatar': './Animals/snake.png',
+        'title': 'Tollohill Wood',
+        'avatar': './Routes/tollohillRoute.png',
         'sound': 'hiss',
-        'image': './Pictures/snake.jpg'
+        'image': './Pictures/tollohill.jpg'
     },
 ];
