@@ -133,13 +133,13 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
             </ion-header>
             <ion-content padding>                
                 <ion-list>
-                    ${animals.map(animal => `
-                        <ion-item button onclick="showDetail('${animal.title}')">
+                    ${ehikes.map(ehike => `
+                        <ion-item button onclick="showEDetail('${ehike.title}')">
                             <ion-avatar slot="start">
-                                <img src="${animal.avatar}">
+                                <img src="${ehike.avatar}">
                             </ion-avatar>
                             <ion-label>
-                                <h1>${animal.title}</h1>
+                                <h1>${ehike.title}</h1>
                             </ion-label>
                         </ion-item>
                     `).join('\n')}
@@ -165,15 +165,15 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
 const nav = document.querySelector('ion-nav');
 
 
-function showDetail(aTitle) {
-    let animal = new Object;
-    for (anAnimal of animals) {
-        if (anAnimal.title === aTitle) {
-            animal = anAnimal;
+function showEDetail(eTitle) {
+    let ehike = new Object;
+    for (anehike of ehikes) {
+        if (anehike.title === eTitle) {
+            ehike = anehike;
         }
     }
-    console.log(animal.title)
-    nav.push('easy-hike-detail', { animal });
+    console.log(ehike.title)
+    nav.push('easy-hike-detail', { ehike });
 }
 
 customElements.define('easy-hike-detail', class extends HTMLElement {
@@ -184,7 +184,7 @@ customElements.define('easy-hike-detail', class extends HTMLElement {
             <ion-buttons slot="start">
                 <ion-back-button defaultHref="/"></ion-back-button>
             </ion-buttons>
-            <ion-title>${this.animal.title}
+            <ion-title>${this.ehike.title}
             </ion-title>
         </ion-toolbar>
     </ion-header>
@@ -192,10 +192,20 @@ customElements.define('easy-hike-detail', class extends HTMLElement {
         <ion-card>
             <ion-card-content>
                 <ion-item>
-                    <ion-img id="img-choice" src="${this.animal.image}"/>
+                    <ion-img id="img-choice" src="${this.ehike.image}"/>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <h1>${this.ehike.title}</h1>
                 </ion-item>
                 <ion-item>
-                    <ion-label><h1>${this.animal.title}s go ${this.animal.sound}</h1></ion-label>
+                    <ion-label>${this.ehike.distance}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <p>${this.ehike.description}</p>
                 </ion-item>
             </ion-card-content>
         </ion-card>
