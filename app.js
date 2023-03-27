@@ -47,19 +47,21 @@ customElements.define('page-parks', class extends HTMLElement {
                     <ion-title slot="end">Parks</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ion-content>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title><h1>Parks</h1></ion-card-title>
-                    </ion-card-header>
-
-                    <ion-card-content>
-                        <ion-item>
-                            <ion-label>Hi</ion-label>
+            <ion-content padding>                
+                    ${parks.map(park => `
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title><h1>${park.title}</h1></ion-card-title>
+                            <ion-card-subtitle>${park.address}</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>
+                        <ion-item button onclick="showPDetail('${park.title}')">
+                        <img src="${park.image}">
                         </ion-item>
-                        <ion-button expand="block" href="#/three">Go to page three</ion-button>
-                    </ion-card-content>
-                </ion-card>
+                        </ion-card-content>
+                    </ion-card>
+                    `).join('\n')}
+                  
             </ion-content>
 
             <ion-footer>
@@ -76,6 +78,8 @@ customElements.define('page-parks', class extends HTMLElement {
         `;
     }
 });
+
+
 
 customElements.define('page-hikes', class extends HTMLElement {
     connectedCallback() {
@@ -229,6 +233,68 @@ function showMDetail(mTitle) {
     nav.push('medium-hike-detail', { mhike });
 }
 
+function showPDetail(pTitle) {
+    let park = new Object;
+    for (apark of parks) {
+        if (apark.title === pTitle) {
+            park = apark;
+        }
+    }
+    console.log(park.title)
+    nav.push('park-details', { park });
+}
+
+customElements.define('park-details', class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <ion-header >
+        <ion-toolbar color="success">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>${this.park.title}
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen class="ion-padding">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.park.detailImage}"/>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <h1>${this.park.title}</h1>
+                </ion-item>
+                <ion-item>
+                    <p>${this.park.address}</p>
+                </ion-item>
+                <ion-item>
+                    <p>${this.park.description}</p>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+
+    <ion-footer>
+            <ion-toolbar color="light">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
+                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-toolbar>
+            </ion-footer
+        `;
+    }
+});
+
+
 customElements.define('easy-hike-detail', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -259,6 +325,13 @@ customElements.define('easy-hike-detail', class extends HTMLElement {
                 </ion-item>
                 <ion-item>
                     <p>${this.ehike.description}</p>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.ehike.route}"/>
                 </ion-item>
             </ion-card-content>
         </ion-card>
@@ -309,6 +382,13 @@ customElements.define('medium-hike-detail', class extends HTMLElement {
                 </ion-item>
                 <ion-item>
                     <p>${this.mhike.description}</p>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.mhike.route}"/>
                 </ion-item>
             </ion-card-content>
         </ion-card>
