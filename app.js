@@ -1,3 +1,51 @@
+const nav = document.querySelector('ion-nav');
+
+
+function showEDetail(eTitle) {
+    let ehike = new Object;
+    for (anehike of ehikes) {
+        if (anehike.title === eTitle) {
+            ehike = anehike;
+        }
+    }
+    console.log(ehike.title)
+    nav.push('easy-hike-detail', { ehike });
+}
+
+function showMDetail(mTitle) {
+    let mhike = new Object;
+    for (anmhike of mhikes) {
+        if (anmhike.title === mTitle) {
+            mhike = anmhike;
+        }
+    }
+    console.log(mhike.title)
+    nav.push('medium-hike-detail', { mhike });
+}
+
+function showPDetail(pTitle) {
+    let park = new Object;
+    for (apark of parks) {
+        if (apark.title === pTitle) {
+            park = apark;
+        }
+    }
+    console.log(park.title)
+    nav.push('park-details', { park });
+}
+
+function showCDetail(cTitle) {
+    let coast = new Object;
+    for (acoast of coasts) {
+        if (acoast.title === cTitle) {
+            coast = acoast;
+        }
+    }
+    console.log(coast.title)
+    nav.push('coast-details', { coast });
+}
+
+
 customElements.define('page-home', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -208,41 +256,6 @@ customElements.define('page-medium-hikes', class extends HTMLElement {
     }
 });
 
-const nav = document.querySelector('ion-nav');
-
-
-function showEDetail(eTitle) {
-    let ehike = new Object;
-    for (anehike of ehikes) {
-        if (anehike.title === eTitle) {
-            ehike = anehike;
-        }
-    }
-    console.log(ehike.title)
-    nav.push('easy-hike-detail', { ehike });
-}
-
-function showMDetail(mTitle) {
-    let mhike = new Object;
-    for (anmhike of mhikes) {
-        if (anmhike.title === mTitle) {
-            mhike = anmhike;
-        }
-    }
-    console.log(mhike.title)
-    nav.push('medium-hike-detail', { mhike });
-}
-
-function showPDetail(pTitle) {
-    let park = new Object;
-    for (apark of parks) {
-        if (apark.title === pTitle) {
-            park = apark;
-        }
-    }
-    console.log(park.title)
-    nav.push('park-details', { park });
-}
 
 customElements.define('park-details', class extends HTMLElement {
     connectedCallback() {
@@ -462,22 +475,80 @@ customElements.define('page-coasts', class extends HTMLElement {
                     <ion-title slot="end">Coastal Walks</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ion-content>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title><h1>Coastal Waks</h1></ion-card-title>
-                    </ion-card-header>
-
-                    <ion-card-content>
-                        <ion-item>
-                            <ion-label>Hi</ion-label>
+            <ion-content padding>                
+                    ${coasts.map(coast => `
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title><h1>${coast.title}</h1></ion-card-title>
+                        </ion-card-header>
+                        <ion-card-content>
+                        <ion-item button onclick="showCDetail('${coast.title}')">
+                        <img src="${coast.route}">
                         </ion-item>
-                        <ion-button expand="block" href="#/three">Go to page three</ion-button>
-                    </ion-card-content>
-                </ion-card>
+                        </ion-card-content>
+                    </ion-card>
+                    `).join('\n')}
+                  
             </ion-content>
 
             <ion-footer>
+            <ion-toolbar color="light">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
+                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-toolbar>
+            </ion-footer
+        `;
+    }
+});
+
+customElements.define('coast-details', class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <ion-header >
+        <ion-toolbar color="secondary">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>${this.coast.title}
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen class="ion-padding">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.coast.image}"/>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <h1>${this.coast.title}</h1>
+                </ion-item>
+                <ion-item>
+                    <ion-label>${this.coast.distance}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <p>${this.coast.description}</p>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.coast.route}"/>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
+
+    <ion-footer>
             <ion-toolbar color="light">
                 <ion-grid>
                     <ion-row>

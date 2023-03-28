@@ -121,3 +121,41 @@ let parks = [
         'description': 'Westburn is a spacious park, opposite Victoria Park and caters for football and tennis. It has a childrens cycle track and a play area, and is known for its excellent grass bowls facility.'
     },
 ];
+
+let coasts = [
+    {
+        'title': 'Donmouth Local Nature Reserve to Aberdeen Beach',
+        'image': './CoastIMG/natureReserve.jpg',
+        'distance': '6.3km',
+        'route': './CoastIMG/natureReserveRoute.png',
+        'description': 'Enjoy this gentle, family friendly trail taking you along the mouth of the River Don and along the esplanade beside Aberdeen Beach where you can take in the views out to sea on a clear day and even extend your day out on the beach. This is a multi-use path so care is needed to accommodate all those who want to enjoy this trail.'
+    },
+    {
+        'title': 'Aberdeen Seafront',
+        'image': './CoastIMG/seafront.jpg',
+        'distance': '5.8km',
+        'route': './CoastIMG/seafrontRoute.png',
+        'description': 'Breath in the fresh sea air on this one that takes you along the Aberdeen seafront and through the town. You will set off from the train station (making it accessible to those living in nearby towns) and head east to the water. Once at the end of Aberdeen Harbour where the River Dee meets the sea, you will turn north and follow the waterside path for about a kilometre before turning back into town.'
+    },
+    {
+        'title': 'Balmedie Country Park and Beach Circular',
+        'image': './CoastIMG/balmedie.jpg',
+        'distance': '2.3km',
+        'route': './CoastIMG/balmedieRoute.png',
+        'description': 'Here you can enjoy a lovely short walk along a gorgeous beach. At the start, there is plenty of parking and toilets available with more facilities along the path. If you like, you can walk further north or south along the beach to see more. Just in from the beach are sand dunes that dogs and kids may enjoy running on.'
+    },
+    {
+        'title': 'Old Portlethen Circular',
+        'image': './CoastIMG/portlethen.jpg',
+        'distance': '5.0km',
+        'route': './CoastIMG/portlethenRoute.png',
+        'description': 'An easy coastal ramble, mostly through arable farmland. The old fishing station and haul-out inlet for boats at Old Portlethen is a scenic highlight. It is important that walkers keep to the path on the stretch along the cliff-tops, where the slopes are steep and slippy.'
+    },
+    {
+        'title': 'Walker Path Coastal Walk',
+        'image': './CoastIMG/walkerPath.jpg',
+        'distance': '5.0km',
+        'route': './CoastIMG/walkerPathRoute.png',
+        'description': 'Enjoy the lovely views out to sea and the River Dee as you make your way from Walker Park, passing Girdle Point, Grey Hope Bay, and South Breakwater where you can see the lighthouses, and turning at Greyhope Road Allotments. This trail also rounds a golf course so care is needed to be aware of golfers.'
+    },
+];
