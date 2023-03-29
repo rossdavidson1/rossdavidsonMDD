@@ -84,6 +84,44 @@ let mhikes = [
     },
 ];
 
+let hhikes = [
+    {
+        'title': 'The Formantine and Buchan Way: Dyce to Ellon',
+        'distance': '21.9km',
+        'image': './Pictures/formantine.jpg',
+        'description': 'This trail, in part, goes along the Formartine and Buchan Way, a long-distance footpath in Scotland. It starts in Dyce and this trail takes you to Ellon but in its entirety the track is around 85 kilometres long and ends up in Peterhead and Fraserburgh in the Buchan and Formartine districts of Aberdeenshire in Scotland.',
+        'route': './Routes/formantineRoute.png',
+    },
+    {
+        'title': 'Aberdeen to Tomintoul',
+        'distance': '100.9km',
+        'image': './Pictures/aberdeenTomintoul.jpg',
+        'description': 'This is the first leg of a two-day journey from Aberdeen to Pitlochry by roads and pathways. The scenery is breathtaking, and the explorers will remember it for a long time. This is an excellent path for having a memorable experience near to nature.',
+        'route': './Routes/aberdeenTomintoulRoute.png',
+    },
+    {
+        'title': 'Peterculter to Aberdeen Beach',
+        'distance': '14.3km',
+        'image': './Pictures/peterculter.jpg',
+        'description': 'This route takes you from Peterculter to the Esplanade and beach in Aberdeen largely along pedestrian paths until reaching the streets of the city. Take care along the busier road sections. Keep an eye out for wildlife as you make your way through the countryside and edges of the towns on your way to the coast.',
+        'route': './Routes/peterculterRoute.png',
+    },
+    {
+        'title': 'The Deeside Way',
+        'distance': '73.2km',
+        'image': './Pictures/deesideWay.jpg',
+        'description': 'There is much to see, explore, and enjoy along this long distance trail taking you from Aberdeen to Ballater with views over the River Dee and scenic paths through Blackshall Forest, Slewdrum Forest, Dess Wood, and Muir of Dinnet. This trail can be split into a number of stages so you can take your time along the path.',
+        'route': './Routes/deesideWayRoute.png',
+    },
+    {
+        'title': 'St Duthacs Way',
+        'distance': '149.5km',
+        'image': './Pictures/stDuthac.jpeg',
+        'description': 'The 11th century St Duthac was a popular saint in the north of Scotland, a native Scot, and buried in Tain. This trail winds between Aberdeen and St Andrews, taking in a mix of natural and historic sights as you make your way along. This trail includes a large amount of walking along roads with no pavements so great care is needed and you will need to be aware of vehicles.',
+        'route': './Routes/stDuthacRoute.png'
+    },
+];
+
 let parks = [
     {
         'title': 'Duthie Park',

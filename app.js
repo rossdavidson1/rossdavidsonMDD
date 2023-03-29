@@ -23,6 +23,17 @@ function showMDetail(mTitle) {
     nav.push('medium-hike-detail', { mhike });
 }
 
+function showHDetail(hTitle) {
+    let hhike = new Object;
+    for (ahhike of hhikes) {
+        if (ahhike.title === hTitle) {
+            hhike = ahhike;
+        }
+    }
+    console.log(hhike.title)
+    nav.push('hard-hike-detail', { hhike });
+}
+
 function showPDetail(pTitle) {
     let park = new Object;
     for (apark of parks) {
@@ -184,21 +195,21 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
                 </ion-toolbar>
             </ion-header>
             <ion-content padding>                
-                <ion-list>
                     ${ehikes.map(ehike => `
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title><h1>${ehike.title}</h1></ion-card-title>
+                            <ion-card-subtitle>Click to explore</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>
                         <ion-item button onclick="showEDetail('${ehike.title}')">
-                            <ion-avatar slot="start">
-                                <img src="${ehike.avatar}">
-                            </ion-avatar>
-                            <ion-label>
-                                <h1>${ehike.title}</h1>
-                            </ion-label>
+                        <img src="${ehike.route}">
                         </ion-item>
+                        </ion-card-content>
+                    </ion-card>
                     `).join('\n')}
-                
-                </ion-list>   
+                  
             </ion-content>
-
             <ion-footer>
             <ion-toolbar color="light">
                 <ion-grid>
@@ -226,19 +237,20 @@ customElements.define('page-medium-hikes', class extends HTMLElement {
                 </ion-toolbar>
             </ion-header>
             <ion-content padding>                
-                <ion-list>
                     ${mhikes.map(mhike => `
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title><h1>${mhike.title}</h1></ion-card-title>
+                            <ion-card-subtitle>Click to explore</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>
                         <ion-item button onclick="showMDetail('${mhike.title}')">
-                            <ion-avatar slot="start">
-                                <img src="${mhike.avatar}">
-                            </ion-avatar>
-                            <ion-label>
-                                <h1>${mhike.title}</h1>
-                            </ion-label>
+                        <img src="${mhike.route}">
                         </ion-item>
+                        </ion-card-content>
+                    </ion-card>
                     `).join('\n')}
-                
-                </ion-list>   
+                  
             </ion-content>
 
             <ion-footer>
@@ -256,6 +268,47 @@ customElements.define('page-medium-hikes', class extends HTMLElement {
     }
 });
 
+customElements.define('page-hard-hikes', class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+            <ion-header>
+                <ion-toolbar color="danger">
+                    <ion-buttons>
+                        <ion-back-button></ion-back-button>
+                    </ion-buttons>
+                    <ion-title slot="end">Hard Hikes</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content padding>                
+                    ${hhikes.map(hhike => `
+                    <ion-card>
+                        <ion-card-header>
+                            <ion-card-title><h1>${hhike.title}</h1></ion-card-title>
+                            <ion-card-subtitle>Click to explore</ion-card-subtitle>
+                        </ion-card-header>
+                        <ion-card-content>
+                        <ion-item button onclick="showHDetail('${hhike.title}')">
+                        <img src="${hhike.route}">
+                        </ion-item>
+                        </ion-card-content>
+                    </ion-card>
+                    `).join('\n')}
+                  
+            </ion-content>
+            <ion-footer>
+            <ion-toolbar color="light">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
+                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-toolbar>
+            </ion-footer
+        `;
+    }
+});
 
 customElements.define('park-details', class extends HTMLElement {
     connectedCallback() {
@@ -422,34 +475,49 @@ customElements.define('medium-hike-detail', class extends HTMLElement {
     }
 });
 
-
-customElements.define('page-hard-hikes', class extends HTMLElement {
+customElements.define('hard-hike-detail', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <ion-header>
-                <ion-toolbar color="danger">
-                    <ion-buttons>
-                        <ion-back-button></ion-back-button>
-                    </ion-buttons>
-                    <ion-title slot="end">Hard Hikes</ion-title>
-                </ion-toolbar>
-            </ion-header>
-            <ion-content>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title><h1>Hard Hikes</h1></ion-card-title>
-                    </ion-card-header>
+        <ion-header >
+        <ion-toolbar color="danger">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title>${this.hhike.title}
+            </ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content fullscreen class="ion-padding">
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.hhike.image}"/>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <h1>${this.hhike.title}</h1>
+                </ion-item>
+                <ion-item>
+                    <ion-label>${this.hhike.distance}</ion-label>
+                </ion-item>
+                <ion-item>
+                    <p>${this.hhike.description}</p>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+        <ion-card>
+            <ion-card-content>
+                <ion-item>
+                    <ion-img id="img-choice" src="${this.hhike.route}"/>
+                </ion-item>
+            </ion-card-content>
+        </ion-card>
+    </ion-content>
 
-                    <ion-card-content>
-                        <ion-item>
-                            <ion-label>Hi</ion-label>
-                        </ion-item>
-                        <ion-button expand="block" href="#/three">Go to page three</ion-button>
-                    </ion-card-content>
-                </ion-card>
-            </ion-content>
-
-            <ion-footer>
+    <ion-footer>
             <ion-toolbar color="light">
                 <ion-grid>
                     <ion-row>
@@ -480,6 +548,7 @@ customElements.define('page-coasts', class extends HTMLElement {
                     <ion-card>
                         <ion-card-header>
                             <ion-card-title><h1>${coast.title}</h1></ion-card-title>
+                            <ion-card-subtitle>Click to explore</ion-card-subtitle>
                         </ion-card-header>
                         <ion-card-content>
                         <ion-item button onclick="showCDetail('${coast.title}')">
