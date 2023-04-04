@@ -57,6 +57,7 @@ function showCDetail(cTitle) {
 }
 
 
+
 customElements.define('page-home', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -76,6 +77,19 @@ customElements.define('page-home', class extends HTMLElement {
                         <ion-button expand="block" href="#/parks">Find Parks</ion-button>
                         <ion-button expand="block" href="#/hikes">Find Hikes</ion-button>
                         <ion-button expand="block" href="#/coasts">Find Coastal Walks</ion-button>
+                    </ion-card-content>
+                </ion-card>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title><h1>Find Weather</h1></ion-card-title>
+                    </ion-card-header>
+
+                    <ion-card-content>
+                        <img src="./Pictures/weatherimg.jpg">
+                        <ion-item>
+                        Click to see the current weather conditions
+                        </ion-item>
+                        <a href=weatherpage.html><input type=button id="weatherbutton" value='Go to Weather'></a>
                     </ion-card-content>
                 </ion-card>
             </ion-content>
@@ -632,6 +646,8 @@ customElements.define('coast-details', class extends HTMLElement {
     }
 });
 
+
+
 customElements.define('page-map', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -645,12 +661,6 @@ customElements.define('page-map', class extends HTMLElement {
                     <ion-card-header>
                         <ion-card-title><h1>Coastal Waks</h1></ion-card-title>
                     </ion-card-header>
-
-                    <ion-card-content>
-                        <ion-item>
-                            <ion-label>Hi</ion-label>
-                        </ion-item>
-                    </ion-card-content>
                 </ion-card>
             </ion-content>
 
@@ -668,6 +678,7 @@ customElements.define('page-map', class extends HTMLElement {
         `;
     }
 });
+
 
 customElements.define('page-profile', class extends HTMLElement {
     connectedCallback() {
