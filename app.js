@@ -79,19 +79,7 @@ customElements.define('page-home', class extends HTMLElement {
                         <ion-button expand="block" href="#/coasts">Find Coastal Walks</ion-button>
                     </ion-card-content>
                 </ion-card>
-                <ion-card>
-                    <ion-card-header>
-                        <ion-card-title><h1>Find Weather</h1></ion-card-title>
-                    </ion-card-header>
-
-                    <ion-card-content>
-                        <img src="./Pictures/weatherimg.jpg">
-                        <ion-item>
-                        Click to see the current weather conditions
-                        </ion-item>
-                        <a href=weatherpage.html><input type=button id="weatherbutton" value='Go to Weather'></a>
-                    </ion-card-content>
-                </ion-card>
+                <img src="./Pictures/homimg.jpg" id="homeimage">
             </ion-content>
 
             <ion-footer>
@@ -99,7 +87,7 @@ customElements.define('page-home', class extends HTMLElement {
                     <ion-grid>
                         <ion-row>
                             <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                            <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                            <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                             <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                         </ion-row>
                     </ion-grid>
@@ -142,7 +130,7 @@ customElements.define('page-parks', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -187,7 +175,7 @@ customElements.define('page-hikes', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -229,7 +217,7 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -272,7 +260,7 @@ customElements.define('page-medium-hikes', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -314,7 +302,7 @@ customElements.define('page-hard-hikes', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -364,7 +352,7 @@ customElements.define('park-details', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -422,7 +410,7 @@ customElements.define('easy-hike-detail', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -479,7 +467,7 @@ customElements.define('medium-hike-detail', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -536,7 +524,7 @@ customElements.define('hard-hike-detail', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -579,7 +567,7 @@ customElements.define('page-coasts', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -636,7 +624,7 @@ customElements.define('coast-details', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -669,7 +657,7 @@ customElements.define('page-map', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
@@ -695,9 +683,18 @@ customElements.define('page-profile', class extends HTMLElement {
                     </ion-card-header>
 
                     <ion-card-content>
+                    <ion-list>
                         <ion-item>
-                            <ion-label>Hi</ion-label>
+                            <ion-input id="enterFname" label="Enter First Name"></ion-input>
                         </ion-item>
+                        <ion-item>
+                            <ion-input id="enterLname" label="Enter Last Name"></ion-input>
+                        </ion-item>
+                    </ion-list>
+                        <ion-item>
+                            <ion-button id="storedata">Log In</ion-button>
+                        </ion-item>
+                        <ion-list id="outputList"></ion-list>
                     </ion-card-content>
                 </ion-card>
             </ion-content>
@@ -707,12 +704,32 @@ customElements.define('page-profile', class extends HTMLElement {
                 <ion-grid>
                     <ion-row>
                         <ion-col size="5"><ion-button class="navbtns"href="#/"><ion-icon name="home"></ion-icon></ion-button></ion-col>
-                        <ion-col size="5"><ion-button href="#/themap"><ion-icon name="navigate"></ion-button></ion-col>
+                        <ion-col size="5"><a href=weatherpage.html><ion-button><ion-icon name="sunny"></ion-icon></ion-button></a></ion-col>
                         <ion-col size="2"><ion-button href="#/profile"><ion-icon name="person"></ion-button></ion-col>
                     </ion-row>
                 </ion-grid>
             </ion-toolbar>
             </ion-footer
         `;
+
+        const saveData = document.getElementById('storedata');
+        saveData.addEventListener('click', saveToStorage)
+
+        function saveToStorage() { //stores items in sessionStorage
+            var fname = document.getElementById('enterFname').value;
+            var lname = document.getElementById('enterLname').value;
+
+            const namedetails = {
+                Firstname: fname,
+                Lastname: lname,
+            }
+
+            window.sessionStorage.setItem('namedetails', JSON.stringify(namedetails));
+            //converting object to string
+            const records = document.createElement('ion-item');
+            records.textContent = window.sessionStorage.getItem('namedetails');
+            outputList.appendChild(records);
+            
+        }
     }
 });
