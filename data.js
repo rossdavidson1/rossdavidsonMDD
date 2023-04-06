@@ -4,7 +4,7 @@ let ehikes = [
         'avatar': './Routes/andersonwoodRoute.png',
         'distance': '4.3km',
         'image': './Pictures/andersonwood.jpg',
-        'description': 'Explore this 4.3-km circular trail near Aberdeen, Aberdeen. Generally considered an easy route, it takes an average of 1 h 7 min to complete. This is a popular trail for hiking, mountain biking, and running, but you can still enjoy some solitude during quieter times of day. The trail is open year-round and is beautiful to visit anytime.',
+        'description': 'This is a pleasant route with many trees and tiny animals. It is not now ideal for buggies, pushchairs, or wheelchairs. It may get fairly crowded with other dog walkers and walkers. On a beautiful day, this route is an excellent place to have a picnic or enjoy some outdoor sports. It is essential to wear appropriate footwear since some areas may get muddy after rain.',
         'route': './Routes/andersonwoodRoute2.png'
     },
     {
@@ -12,7 +12,7 @@ let ehikes = [
         'avatar': './Routes/donmouthRoute.png',
         'distance': '11.1km',
         'image': './Pictures/donmouth.jpg',
-        'description': 'Try this 11.1-km circular trail near Aberdeen, Aberdeen. Generally considered an easy route, it takes an average of 2 h 26 min to complete. This is a popular trail for birding, hiking, and mountain biking, but you can still enjoy some solitude during quieter times of day.',
+        'description': 'This route winds along the River Don, taking in a mix of town and nature. This trail offers a great city break taking in numerous sights along the way. Parts of this trail can get very muddy in wet weather, especially around Seaton Park, so take care at these points. Enjoy reconnecting with nature and get away from everyday modern life for a while.',
         'route': './Routes/donmouthRoute2.png'
     },
     {
@@ -20,7 +20,7 @@ let ehikes = [
         'avatar': './Routes/footdeeRoute.png',
         'distance': '9.5km',
         'image': './Pictures/footdee.jpg',
-        'description': 'Check out this 9.5-km out-and-back trail near Aberdeen, Aberdeen. Generally considered an easy route, it takes an average of 1 h 55 min to complete. This is a popular trail for road biking, running, and walking, but you can still enjoy some solitude during quieter times of day.',
+        'description': 'An easy-going route which is suitable to most abilities, so a wonderful opportunity to get outdoors. If you come to this area and some want to go into town and do the usual shopping and other activities which take you away from nature, this is a great place to come to if you want to avoid that. It lets you (and your dog) get out and stretch your legs a little.',
         'route': './Routes/footdeeRoute2.png',
     },
     {
@@ -28,7 +28,7 @@ let ehikes = [
         'avatar': './Routes/riverdonRoute.png',
         'distance': '1.9km',
         'image': './Pictures/riverdon.jpg',
-        'description': 'Experience this 1.9-km circular trail near Aberdeen, Aberdeen. Generally considered an easy route, it takes an average of 23 min to complete. This is a popular trail for hiking, running, and walking, but you can still enjoy some solitude during quieter times of day.',
+        'description': 'A pleasant winding trail, the River Don Path offers a gentle waterside route with views over the river and scenic paths through Seaton Park Wood and Walkers Haugh where you can also keep an eye out for wildlife. Take care on the rougher sections, especially in wetter conditions. Appropriate footwear is advised.',
         'route': './Routes/riverdonRoute2.png',
     },
     {
@@ -36,7 +36,7 @@ let ehikes = [
         'avatar': './Routes/tollohillRoute.png',
         'distance': '2.1km',
         'image': './Pictures/tollohill.jpg',
-        'description': 'Get to know this 2.1-km circular trail near Aberdeen, Aberdeen. Generally considered an easy route, it takes an average of 34 min to complete. This is a popular trail for mountain biking, running, and walking, but you can still enjoy some solitude during quieter times of day. The trail is open year-round and is beautiful to visit anytime.',
+        'description': 'Enjoy this lovely woodland trail winding through the trees of Tollohill Wood where you can keep an eye out for wildlife and listen out for birdsong. You can also take in the short detour to Prince Alberts Monument where there are lovely views. Take care on the rougher sections of this trail, especially in wetter conditions.',
         'route': './Routes/tollohillRoute2.png',
     },
 ];
@@ -47,7 +47,7 @@ let mhikes = [
         'avatar': './Routes/countesswellsRoute.png',
         'distance': '6.9km',
         'image': './Pictures/countesswells.jpg',
-        'description': 'Get to know this 6.9-km circular trail near Aberdeen, Aberdeen. Generally considered a moderately challenging route, it takes an average of 1 h 56 min to complete. This is a popular trail for hiking, mountain biking, and running, but you can still enjoy some solitude during quieter times of day.',
+        'description': 'This route is multi-user with hikers, runners, and mountain bikers all using the trails. Care should be taken to accommodate all who want to enjoy these paths. Some parts of this trail may be rougher, care should be taken. There are many adjoining paths to explore if you wish to shorten or lengthen your route.',
         'route': './Routes/countesswellsRoute2.png',
     },
     {
@@ -55,7 +55,7 @@ let mhikes = [
         'avatar': './Routes/elsickRoute.png',
         'distance': '13.5km',
         'image': './Pictures/elsick.jpg',
-        'description': 'Explore this 13.5-km out-and-back trail near Peterculter, Aberdeen. Generally considered a moderately challenging route, it takes an average of 3 h 50 min to complete. This trail is great for hiking, running, and walking, and it is unlikely you will encounter many other people while exploring.',
+        'description': 'This is a beautiful historic trail taking you along the ancient road through the forest and open hillside with lovely views over the surrounding area. This road was either built by the Romans or was developed by them from a pre-existing ancient track. There is also a carved stone depicting ogham writing along the way which probably dates to between the 5th and 6th centuries.',
         'route': './Routes/elsickRoute2.png',
     },
     {
@@ -63,7 +63,7 @@ let mhikes = [
         'avatar': './Routes/kincorthRoute.png',
         'distance': '2.7km',
         'image': './Pictures/kincorthHill.jpg',
-        'description': 'Discover this 2.7-km circular trail near Aberdeen, Aberdeen. Generally considered a moderately challenging route, it takes an average of 39 min to complete. This trail is great for hiking and walking, and it is unlikely you will encounter many other people while exploring.',
+        'description': 'Kincorth Hill Local Nature Reserve (LNR) contains extensive areas of gorse scrub, heathland, young coniferous and broadleaved woodland. The site is well sign posted and it also offers panoramic views across the city to Peterhead in the north, as well as Lochnagar to the south west, and the mountains of Deeside to the west.',
         'route': './Routes/kincorthRoute2.png',
     },
     {
@@ -71,7 +71,7 @@ let mhikes = [
         'avatar': './Routes/kingshillRoute.png',
         'distance': '7.7km',
         'image': './Pictures/kingshill.jpg',
-        'description': 'Head out on this 7.7-km circular trail near Aberdeen, Aberdeen. Generally considered a moderately challenging route, it takes an average of 2 h 3 min to complete. This is a popular trail for hiking, mountain biking, and running, but you can still enjoy some solitude during quieter times of day.',
+        'description': 'The natural world around us provides many opportunities for encounters with local animals and plants and this trail allows us to do just that. The parking for the trail is a small lay-by along Blacktop Road (C127C). If this is full alternative parking is available along North Countesswells Road at the Countesswells car park.',
         'route': './Routes/kingshillRoute2.png',
     },
     {
@@ -79,14 +79,14 @@ let mhikes = [
         'avatar': './Routes/maidencraigRoute.png',
         'distance': '2.1km',
         'image': './Pictures/maidencraig.jpg',
-        'description': 'Experience this 2.1-km circular trail near Aberdeen, Aberdeen. Generally considered a moderately challenging route, it takes an average of 31 min to complete. This trail is great for running and walking, and it is unlikely you will encounter many other people while exploring.',
+        'description': 'This is a short and easy route around Den of Maidencraig Local Nature Reserve. There is a small car park where you will begin. Head north on the path then make your way west through the fields and woods. The way back is next to the A road so if you want to avoid the noise, you can take the same route you took out to get back to the start.',
         'route': './Routes/maidencraigRoute2.png'
     },
 ];
 
 let hhikes = [
     {
-        'title': 'The Formantine and Buchan Way: Dyce to Ellon',
+        'title': 'The Formartine and Buchan Way: Dyce to Ellon',
         'distance': '21.9km',
         'image': './Pictures/formantine.jpg',
         'description': 'This trail, in part, goes along the Formartine and Buchan Way, a long-distance footpath in Scotland. It starts in Dyce and this trail takes you to Ellon but in its entirety the track is around 85 kilometres long and ends up in Peterhead and Fraserburgh in the Buchan and Formartine districts of Aberdeenshire in Scotland.',

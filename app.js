@@ -679,20 +679,40 @@ customElements.define('page-profile', class extends HTMLElement {
             <ion-content>
                 <ion-card>
                     <ion-card-header>
-                        <ion-card-title><h1>Coastal Waks</h1></ion-card-title>
+                        <ion-card-title><h1>Profile</h1></ion-card-title>
                     </ion-card-header>
 
                     <ion-card-content>
+                    <img src="./Pictures/profileimg.png" id="profileimg">
+                    <h1>To-Do List</h1>
                     <ion-list>
                         <ion-item>
-                            <ion-input id="enterFname" label="Enter First Name"></ion-input>
-                        </ion-item>
-                        <ion-item>
-                            <ion-input id="enterLname" label="Enter Last Name"></ion-input>
+                            <ion-select aria-label="fruit" id="enterRoute" placeholder="Select Route">
+                                <ion-select-option value="Anderson Wood">Anderson Wood</ion-select-option>
+                                <ion-select-option value="Donmouth and Persley Circular">Donmouth and Persley Circular</ion-select-option>
+                                <ion-select-option value="Footdee to Hillhead Center">Footdee to Hillhead Center</ion-select-option>
+                                <ion-select-option value="River Don Path">River Don Path</ion-select-option>
+                                <ion-select-option value="Tollohill Wood">Tollohill Wood</ion-select-option>
+                                <ion-select-option value="Countesswells Circular">Countesswells Circular</ion-select-option>
+                                <ion-select-option value="Elsick Mounth">Elsick Mounth</ion-select-option>
+                                <ion-select-option value="Kincorth Hill">Kincorth Hill</ion-select-option>
+                                <ion-select-option value="Kingshill Wood Circular">Kingshill Wood Circular</ion-select-option>
+                                <ion-select-option value="Den of Maidencraig Circular">Den of Maidencraig Circular</ion-select-option>
+                                <ion-select-option value="The Formartine and Buchan Way: Dyce to Ellon">The Formartine and Buchan Way: Dyce to Ellon</ion-select-option>
+                                <ion-select-option value="Aberdeen to Tomintoul">Aberdeen to Tomintoul</ion-select-option>
+                                <ion-select-option value="Peterculter to Aberdeen Beach">Peterculter to Aberdeen Beach</ion-select-option>
+                                <ion-select-option value="The Deeside Way">The Deeside Way</ion-select-option>
+                                <ion-select-option value="St Duthacs Way">St Duthacs Way</ion-select-option>
+                                <ion-select-option value="Donmouth Local Nature Reserve to Aberdeen Beach">Donmouth Local Nature Reserve to Aberdeen Beach</ion-select-option>
+                                <ion-select-option value="Aberdeen Seafront">Aberdeen Seafront</ion-select-option>
+                                <ion-select-option value="Balmedie Country Park and Beach Circular">Balmedie Country Park and Beach Circular</ion-select-option>
+                                <ion-select-option value="Old Portlethen Circular">Old Portlethen Circular</ion-select-option>
+                                <ion-select-option value="Walker Path Coastal Walk">Walker Path Coastal Walk</ion-select-option>
+                            </ion-select>
                         </ion-item>
                     </ion-list>
                         <ion-item>
-                            <ion-button id="storedata">Log In</ion-button>
+                            <ion-button id="storedata">Add to to-do list</ion-button>
                         </ion-item>
                         <ion-list id="outputList"></ion-list>
                     </ion-card-content>
@@ -716,20 +736,18 @@ customElements.define('page-profile', class extends HTMLElement {
         saveData.addEventListener('click', saveToStorage)
 
         function saveToStorage() { //stores items in sessionStorage
-            var fname = document.getElementById('enterFname').value;
-            var lname = document.getElementById('enterLname').value;
+            var route = document.getElementById('enterRoute').value;
 
-            const namedetails = {
-                Firstname: fname,
-                Lastname: lname,
+            const routesdetail = {
+                Route: route,
             }
 
-            window.sessionStorage.setItem('namedetails', JSON.stringify(namedetails));
+            window.localStorage.setItem('routesdetail', JSON.stringify(routesdetail));
             //converting object to string
             const records = document.createElement('ion-item');
-            records.textContent = window.sessionStorage.getItem('namedetails');
+            records.textContent = window.localStorage.getItem('routesdetail');
             outputList.appendChild(records);
-            
+
         }
     }
 });
