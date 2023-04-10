@@ -1,6 +1,6 @@
 const nav = document.querySelector('ion-nav');
 
-
+// Functions for ensuring the correct page is shown when clicking on certain walk/hike
 function showEDetail(eTitle) {
     let ehike = new Object;
     for (anehike of ehikes) {
@@ -57,7 +57,7 @@ function showCDetail(cTitle) {
 }
 
 
-
+// Home Page
 customElements.define('page-home', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -97,6 +97,7 @@ customElements.define('page-home', class extends HTMLElement {
     }
 });
 
+// Parks page
 customElements.define('page-parks', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -141,7 +142,7 @@ customElements.define('page-parks', class extends HTMLElement {
 });
 
 
-
+// Hikes Page
 customElements.define('page-hikes', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -185,6 +186,7 @@ customElements.define('page-hikes', class extends HTMLElement {
     }
 });
 
+// Easy hikes page
 customElements.define('page-easy-hikes', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -227,6 +229,7 @@ customElements.define('page-easy-hikes', class extends HTMLElement {
     }
 });
 
+// Medium hikes page
 customElements.define('page-medium-hikes', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -270,6 +273,7 @@ customElements.define('page-medium-hikes', class extends HTMLElement {
     }
 });
 
+// Hard hikes page
 customElements.define('page-hard-hikes', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -312,6 +316,7 @@ customElements.define('page-hard-hikes', class extends HTMLElement {
     }
 });
 
+// Park details page
 customElements.define('park-details', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -362,7 +367,7 @@ customElements.define('park-details', class extends HTMLElement {
     }
 });
 
-
+// Easy hike details page
 customElements.define('easy-hike-detail', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -420,6 +425,7 @@ customElements.define('easy-hike-detail', class extends HTMLElement {
     }
 });
 
+// Medium hikes detail page
 customElements.define('medium-hike-detail', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -477,6 +483,7 @@ customElements.define('medium-hike-detail', class extends HTMLElement {
     }
 });
 
+// Hard hikes details page
 customElements.define('hard-hike-detail', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -534,6 +541,7 @@ customElements.define('hard-hike-detail', class extends HTMLElement {
     }
 });
 
+// Coastal walks page
 customElements.define('page-coasts', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -577,6 +585,7 @@ customElements.define('page-coasts', class extends HTMLElement {
     }
 });
 
+// Coasts details page
 customElements.define('coast-details', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -635,7 +644,7 @@ customElements.define('coast-details', class extends HTMLElement {
 });
 
 
-
+// Map page
 customElements.define('page-map', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -667,7 +676,7 @@ customElements.define('page-map', class extends HTMLElement {
     }
 });
 
-
+// Profile page
 customElements.define('page-profile', class extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -735,7 +744,7 @@ customElements.define('page-profile', class extends HTMLElement {
         const saveData = document.getElementById('storedata');
         saveData.addEventListener('click', saveToStorage)
 
-        function saveToStorage() { //stores items in sessionStorage
+        function saveToStorage() { // Stores items in localStorage
             var route = document.getElementById('enterRoute').value;
 
             const routesdetail = {
@@ -743,9 +752,10 @@ customElements.define('page-profile', class extends HTMLElement {
             }
 
             window.localStorage.setItem('routesdetail', JSON.stringify(routesdetail));
-            //converting object to string
+            // Converting object to string
             const records = document.createElement('ion-item');
             records.textContent = window.localStorage.getItem('routesdetail');
+            // Displays data with the selected route
             outputList.appendChild(records);
 
         }

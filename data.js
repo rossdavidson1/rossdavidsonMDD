@@ -1,3 +1,4 @@
+// Easy hikes data
 let ehikes = [
     {
         'title': 'Anderson Wood',
@@ -41,6 +42,7 @@ let ehikes = [
     },
 ];
 
+// Medium hike detail data 
 let mhikes = [
     {
         'title': 'Countesswells Circular',
@@ -84,6 +86,7 @@ let mhikes = [
     },
 ];
 
+// Hard hikes data
 let hhikes = [
     {
         'title': 'The Formartine and Buchan Way: Dyce to Ellon',
@@ -122,6 +125,7 @@ let hhikes = [
     },
 ];
 
+// Parks data
 let parks = [
     {
         'title': 'Duthie Park',
@@ -160,6 +164,7 @@ let parks = [
     },
 ];
 
+// Coastal walks data
 let coasts = [
     {
         'title': 'Donmouth Local Nature Reserve to Aberdeen Beach',
