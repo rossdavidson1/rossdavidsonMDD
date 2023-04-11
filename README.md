@@ -10,6 +10,8 @@ My app is called HikeHub Aberdeen and allows users to find walks and trails and 
 - There's a weather page which pulls in data from a weather API and displays details about the current weather in Abereden, with data such as current temperature, wind speed, sunset time, etc.
 - A profile page which allows users to add a selected route to a to-do-list which is stored in local storage and displayed.
 
+# Link to coursework video:
+https://liverguac-my.sharepoint.com/:v:/g/personal/r_davidson37_rgu_ac_uk/EX8G4ESGlOdEjf2gskv0P8MBzKfvzLOBiiC_sdUPumkmLw?e=1o9eBO
 
 ## Referencing and sources
 All hike descriptions, distances, images and route names taken with credit from https://www.alltrails.com/en-gb. I do not claim to own any of the information or data.
