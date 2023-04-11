@@ -1,6 +1,6 @@
 const nav = document.querySelector('ion-nav');
 
-// Functions for ensuring the correct page is shown when clicking on certain walk/hike
+// Function for ensuring the correct page is shown when clicking on certain walk/hike
 function showEDetail(eTitle) {
     let ehike = new Object;
     for (anehike of ehikes) {
@@ -11,7 +11,7 @@ function showEDetail(eTitle) {
     console.log(ehike.title)
     nav.push('easy-hike-detail', { ehike });
 }
-
+// Function for ensuring the correct page is shown when clicking on certain walk/hike
 function showMDetail(mTitle) {
     let mhike = new Object;
     for (anmhike of mhikes) {
@@ -22,7 +22,7 @@ function showMDetail(mTitle) {
     console.log(mhike.title)
     nav.push('medium-hike-detail', { mhike });
 }
-
+// Function for ensuring the correct page is shown when clicking on certain walk/hike
 function showHDetail(hTitle) {
     let hhike = new Object;
     for (ahhike of hhikes) {
@@ -33,7 +33,7 @@ function showHDetail(hTitle) {
     console.log(hhike.title)
     nav.push('hard-hike-detail', { hhike });
 }
-
+// Function for ensuring the correct page is shown when clicking on certain walk/hike
 function showPDetail(pTitle) {
     let park = new Object;
     for (apark of parks) {
@@ -44,7 +44,7 @@ function showPDetail(pTitle) {
     console.log(park.title)
     nav.push('park-details', { park });
 }
-
+// Function for ensuring the correct page is shown when clicking on certain walk/hike
 function showCDetail(cTitle) {
     let coast = new Object;
     for (acoast of coasts) {
